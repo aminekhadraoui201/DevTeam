@@ -1,0 +1,19 @@
+.nav-item {
+    margin-bottom: 10px; /* Ajoute de l'espace en bas de chaque élément */
+}
+
+.nav-item a {
+    display: block; /* Assure que le lien remplit tout l'espace du <li> pour un meilleur clic */
+    padding: 5px 10px; /* Ajoute de l'espace autour du texte pour une meilleure lisibilité */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    color: inherit; /* Hérite la couleur du texte de l'élément parent */
+}
+
+.nav-item a:hover {
+    background-color: #f2f2f2; /* Change le fond au survol pour une meilleure interaction visuelle */
+}
+
+/* Utilisez cette classe pour l'élément actif pour le mettre en évidence */
+.active {
+    font-weight: bold;
+}
