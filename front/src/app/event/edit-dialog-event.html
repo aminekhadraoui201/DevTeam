@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Update the event</h2>
+
+<mat-dialog-content class="mat-typography">
+  <form>
+    <div class="form-group">
+      <label for="eventName">Event name</label>
+      <input class="form-control" [(ngModel)]="data.eventName" name="eventName" id="eventName">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" [(ngModel)]="data.description" name="description" id="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="eventStart">Start date</label>
+      <input type="date" class="form-control" [(ngModel)]="data.eventStart" name="eventStart" id="eventStart">
+    </div>
+    <div class="form-group">
+      <label for="eventEnd">End date</label>
+      <input type="date" class="form-control" [(ngModel)]="data.eventEnd" name="eventEnd" id="eventEnd">
+    </div>
+    <div class="form-group">
+      <label for="budget">Budget</label>
+      <input type="number" class="form-control" [(ngModel)]="data.budget" name="budget" id="budget">
+    </div>
+    <div>
+      <label for="poster">Event poster</label>
+      <div>
+        <input type="file" (change)="onFileChange($event)" accept="image/*" id="poster">
+      </div>
+    </div>
+    
+    <!-- Add more fields as needed -->
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" (click)="submitEdit()">Enregistrer</button>
+</mat-dialog-actions>

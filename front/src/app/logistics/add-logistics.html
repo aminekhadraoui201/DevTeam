@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Ajouter un événement</h2>
+
+<mat-dialog-content class="mat-typography">
+  <form>
+    <div class="form-group">
+      <label for="eventName">classNb</label>
+      <input type="number" class="form-control" [(ngModel)]="data.classNb" name="class" id="class">
+    </div>
+    <div class="form-group">
+      <label for="description">table Count</label>
+      <input type="number" class="form-control" [(ngModel)]="data.tableCount" name="tableCount" id="tableCount">
+    </div>
+    <div class="form-group">
+      <label for="eventStart">chair</label>
+      <input type="number" class="form-control" [(ngModel)]="data.chair" name="chair" id="chair">
+    </div>
+    <div class="form-group">
+      <label for="eventEnd">accessory</label>
+      <input type="text" class="form-control" [(ngModel)]="data.accessory" name="accessory" id="accessory">
+    </div>
+
+    <!-- Add more fields as needed -->
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" (click)="submit()">Valider</button>
+</mat-dialog-actions>

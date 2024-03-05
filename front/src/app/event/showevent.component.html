@@ -1,0 +1,78 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <p>aa</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">{{ filteredDataa?.eventName }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="card shadow">
+                            <div class="card-header border-0 align-self-end">
+                                <button type="button" class="btn btn-info"
+                                    (click)="openEditDialog1(filteredDataa.id_event, filteredDataa.eventName, filteredDataa.description, filteredDataa.eventStart, filteredDataa.eventEnd, filteredDataa.budget, filteredDataa.poster)">
+                                    <i class="fas fa-plus" style="margin-right: 10px;"></i>Edit the event
+                                </button>
+                            </div>
+                            <div class="input-group mb-3">
+                                <p style="font-size: 15px; margin-right: 20px;">Starting date: </p>
+                                <p style="font-size: 18px;font-weight: bold;">{{filteredDataa?.eventStart}}</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <p style="font-size: 15px; margin-right: 20px;">Ending date: </p>
+                                <p style="font-size: 18px;font-weight: bold;">{{filteredDataa?.eventEnd}}</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <p style="font-size: 15px; margin-right: 20px;">budget: </p>
+                                <p style="font-size: 18px;font-weight: bold;">{{filteredDataa?.budget}}</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <p style="font-size: 15px; margin-right: 20px;">Number of participants </p>
+                                <p style="font-size: 18px;font-weight: bold;">{{filteredDataa?.nbrParticipant}}</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <p style="font-size: 15px; margin-right: 20px;">Organiser </p>
+                                <p style="font-size: 18px;font-weight: bold;">{{filteredDataa?.organisateur}}</p>
+                            </div>
+                            <div class="input-group mb-2">
+                                <h3>logistics: </h3>
+                            </div>
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <tr>
+                                        <th scope="col">Class Number</th>
+                                        <th scope="col">Tables</th>
+                                        <th scope="col">Chair</th>
+                                        <th scope="col">Accessory</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+
+                                        <td>{{ filteredDataa.logistiques.classNb }}</td>
+                                        <td>{{ filteredDataa.logistiques.tableCount }}</td>
+                                        <td>{{ filteredDataa.logistiques.chair }}</td>
+                                        <td>{{ filteredDataa.logistiques.accessory }}</td>
+                                        <td>
+                                            <button *ngIf="true" class="btn btn-primary btn-sm"
+                                                (click)="editLogistics(filteredDataa.logistiques)">Edit
+                                                logistics</button>
+                                            <button *ngIf="true" class="btn btn-primary btn-sm"
+                                                (click)="addLogistics(filteredDataa.id_event)">Add
+                                                Logistics</button>
+                                        </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
